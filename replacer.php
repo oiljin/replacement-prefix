@@ -9,6 +9,8 @@
     $base 		= 'database_name';
 	/* Configuration end*/
 
+	log("*************** START ************");
+	
     $mysqli = new mysqli($hostname, $username, $password, $base);
     if(mysqli_connect_errno()){
         log('error '.mysqli_connect_error());
@@ -47,11 +49,12 @@
             $info['skipped tables'] = $no;
         }
         
-        log("*************** FINISH ************");
         print_r($info);
         
         $mysqli->close();
     }
+	
+	log("*************** FINISH ************");
 	
 	function log($msg){
 		$echo  date("[H:i:s] ").$msg.PHP_EOL;
