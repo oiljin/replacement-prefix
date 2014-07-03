@@ -57,6 +57,6 @@
 	log("*************** FINISH ************");
 	
 	function log($msg){
-		$echo  date("[H:i:s] ").$msg.PHP_EOL;
+		echo  date("[H:i:s] ").$msg.PHP_EOL;
 	}
         
